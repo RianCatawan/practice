@@ -9,41 +9,41 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <title>Login Page</title>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; height: 100%; overflow-x: hidden; background-color: #f4f3f2 ; justify-content: center;" >
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; height: 100%; overflow-x: hidden; background-color: #f4f3f2; justify-content: center;">
   
     <header style="display: flex; align-items: left; justify-content: left; gap: 20px;">
         <img src="/logo fitness.jpg" alt="description" width="100" height="70">        
      
         <nav style="display: flex; justify-content: center; gap: 20px; width: 60%;">
-            
-            
-            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; justify-content: center;align-items: center;font-family: 'Roboto', sans-serif;">Home Workout</h5>
+            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; justify-content: center; align-items: center; font-family: 'Roboto', sans-serif;">Home Workout</h5>
             <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; font-family: 'Roboto', sans-serif;">Mental Health Practices</h5>
-            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; font-family: 'Roboto', sans-serif;">wellness Routine</h5>
-            <h5  href="#" style="padding: 14px 20px; text-decoration: none; color: black;font-family: 'Roboto', sans-serif;">Nutrition sadAt Home</h5>
-            <h5  href="#" style="padding: 14px 20px; position: absolute;right:50px; text-decoration: none; color: black;font-family: 'Roboto', sans-serif;">Log 🇮🇳</h5>
+            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; font-family: 'Roboto', sans-serif;">Wellness Routine</h5>
+            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; font-family: 'Roboto', sans-serif;">Nutrition at Home</h5>
+            <h5 href="#" style="padding: 14px 20px; position: absolute; right: 50px; text-decoration: none; color: black; font-family: 'Roboto', sans-serif;">Log 🇮🇳</h5>
+            <a href="/log-in.html" style="padding: 14px 20px; position: absolute; right: 120px; text-decoration: none; color: black; font-family: 'Roboto', sans-serif;">Start for free</a> 
         </nav>
     </header>
 
-    <!-- Centered Login Form Section -->
     <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; margin-top: 120px;">
         <div class="login-container" style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 400px; text-align: center;">
             <h2>Login</h2>
             <form id="loginForm">
                 <input type="email" id="email" placeholder="Enter your email" required style="width: 90%; padding: 10px; margin: 10px 0; border-radius: 4px; border: 1px solid #ccc;"><br>
                 <input type="password" id="password" placeholder="Enter your password" required style="width: 90%; padding: 10px; margin: 10px 0; border-radius: 4px; border: 1px solid #ccc;"><br>
-                <button type="submit" style="padding: 10px 20px; background-color: #1900ff; color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%;">Login</button>
+                <button  type="submit" style="padding: 10px 20px; background-color: #1900ff; color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%;">Login</button>
             </form>
             <div id="errorMessage" class="error-message" style="color: red; margin-top: 10px;"></div>
         </div>
     </div>
+
     <a href="/index.html" style="background-color: rgb(220, 200, 200); padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(18, 6, 6, 0.1); width: 100px; text-align: center; position: absolute; top: 70%; right: 400px; transform: translateY(-50%); text-decoration: none; color: black; font-size: 1rem; cursor: pointer;">
         Back
     </a>
+
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
+            event.preventDefault(); 
+            
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
             var errorMessage = document.getElementById("errorMessage");
@@ -51,7 +51,8 @@
             if (email === "" || password === "") {
                 errorMessage.textContent = "Cannot log in. Please enter both email and password.";
             } else {
-                window.location.href = "home.html";  // Replace with your actual page
+            
+                window.location.href = "/secondhome.html"; 
             }
         });
     </script>

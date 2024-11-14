@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced bodyweight workout routine with interactive timer and 'Next Workout' feature.">
+    <title>Advanced Workout Plan</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333;">
+
+    <header style="display: flex; align-items: left; justify-content: left; gap: 20px;">
+        <img src="/logo fitness.jpg" alt="description" width="100" height="70">        
+        <nav style="display: flex; justify-content: center; gap: 20px; width: 60%;">
+            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; justify-content: center;align-items: center;font-family: 'Roboto', sans-serif;">Home Workout</h5>
+            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; font-family: 'Roboto', sans-serif;">Mental Health Practices</h5>
+            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black; font-family: 'Roboto', sans-serif;">Wellness Routine</h5>
+            <h5 href="#" style="padding: 14px 20px; text-decoration: none; color: black;font-family: 'Roboto', sans-serif;">Nutrition at Home</h5>
+            <a href="/log-in.html" style="padding: 14px 20px; position: absolute;right:50px; text-decoration: none; color: black;font-family: 'Roboto', sans-serif;">Log 🇮🇳</a>
+            <a href="/log-in.html" style="padding: 14px 20px; position: absolute;right:120px; text-decoration: none; color: black;font-family: 'Roboto', sans-serif;">Start for Free</a> 
+        </nav>
+    </header>
+
+    <div class="container" style="width: 100%; height: 100px; margin: 100px auto;">
+        <!-- Step 1: Warm-up -->
+        <div id="step1" class="workout-step active" style="display: block; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h2>Step 1: Warm-up</h2>
+            <p>3 minutes of light jogging or jumping jacks.</p>
+            <button class="button" onclick="startTimer('step1', 180)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Warm-up Timer</button>
+            <div id="timer-step1" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">3:00</div>
+            <button class="button" onclick="showNextStep('step1')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
+        </div>
+
+        <!-- Step 2: Pistol Squats -->
+        <div id="step2" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h2>Step 2: Pistol Squats (Assisted or Unassisted)</h2>
+            <p>3 sets of 6 reps per leg (use a chair for assistance if necessary).</p>
+            <button class="button" onclick="startTimer('step2', 60)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Pistol Squats</button>
+            <div id="timer-step2" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">1:00</div>
+            <button class="button" onclick="showNextStep('step2')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
+        </div>
+
+        <!-- Step 3: Bulgarian Split Squats -->
+        <div id="step3" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h2>Step 3: Bulgarian Split Squats</h2>
+            <p>3 sets of 10 reps per leg (use a bench or chair for support).</p>
+            <button class="button" onclick="startTimer('step3', 60)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Split Squats</button>
+            <div id="timer-step3" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">1:00</div>
+            <button class="button" onclick="showNextStep('step3')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
+        </div>
+
+        <!-- Step 4: Archer Push-ups or Clap Push-ups -->
+        <div id="step4" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h2>Step 4: Archer Push-ups or Clap Push-ups</h2>
+            <p>3 sets of 8 reps (each side for Archer push-ups).</p>
+            <button class="button" onclick="startTimer('step4', 45)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Push-ups</button>
+            <div id="timer-step4" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">0:45</div>
+            <button class="button" onclick="showNextStep('step4')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
+        </div>
+
+        <!-- Step 5: Side Planks with Leg Raises -->
+        <div id="step5" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h2>Step 5: Side Planks with Leg Raises</h2>
+            <p>3 sets of 30 seconds per side.</p>
+            <button class="button" onclick="startTimer('step5', 30)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Side Plank</button>
+            <div id="timer-step5" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">0:30</div>
+            <button class="button" onclick="showNextStep('step5')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
+        </div>
+
+        <!-- Cool-down -->
+        <div id="cooldown" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h2>Step 6: Cool-down</h2>
+            <p>5 minutes of stretching to relax your muscles.</p>
+            <button class="button" onclick="startTimer('cooldown', 300)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Cool-down Timer</button>
+            <div id="timer-cooldown" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">5:00</div>
+        </div>
+    </div>
+
+    <script>
+        function startTimer(stepId, duration) {
+            let timerElement = document.getElementById(`timer-${stepId}`);
+            let remainingTime = duration;
+            let interval = setInterval(function() {
+                let minutes = Math.floor(remainingTime / 60);
+                let seconds = remainingTime % 60;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                timerElement.textContent = minutes + ':' + seconds;
+                remainingTime--;
+                if (remainingTime < 0) {
+                    clearInterval(interval);
+                    document.getElementById(stepId).style.display = 'none';
+                    let nextStep = document.querySelector(`#step${parseInt(stepId.replace('step', '')) + 1}`);
+                    if (nextStep) {
+                        nextStep.style.display = 'block';
+                    }
+                }
+            }, 1000);
+        }
+
+        function showNextStep(currentStep) {
+            document.getElementById(currentStep).style.display = 'none';
+            let nextStep = document.querySelector(`#step${parseInt(currentStep.replace('step', '')) + 1}`);
+            if (nextStep) {
+                nextStep.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
